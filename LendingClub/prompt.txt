@@ -1,0 +1,59 @@
+Prompt
+
+The data above consist of a sample of 2,500 peer-to-peer loans issued through the Lending Club (https://www.lendingclub.com/home.action). The interest rate of these loans is determined by the Lending Club on the basis of characteristics of the person asking for the loan such as their employment history, credit history, and creditworthiness scores. 
+
+The purpose of your analysis is to identify and quantify associations between the interest rate of the loan and the other variables in the data set. In particular, you should consider whether any of these variables have an important association with interest rate after taking into account the applicant's FICO score. For example, if two people have the same FICO score, can the other variables explain a difference in interest rate between them?
+
+
+What you should submit
+
+Your data analysis submission will consist of the following components:
+The main text of your document including a numbered list of references. This can be uploaded either as a pdf document or typed into the text box (not both!). The limit for the text and references is 2000 words. Your main text should be written in the form of an essay with an introduction, methods, results, and conclusions section. 
+One figure for your data analysis uploaded as a .png, .jpg, or .pdf file, along with a figure caption of up to 500 words. 
+
+Title: Increased FICO score associated with lower Interest rates
+
+Introduction:
+FICO scores[1] play an important role in letting lenders decide the interest rates at which money is lent to debtors. Consumers having a higher credit score are more likely to get a favorable (small)interest rates from their lenders. 
+Characterizing this relationship can help us make better decisions when it comes to requesting a loan. Using a combination of regression techniques and exploratory analysis we show that there is a significant relationship between FICO score and Interest rates even after accounting for potential confounders like the amount being requested or the loan duration. Our analysis suggests that Interest rates depend inversely on FICO score
+
+Methods:
+
+Data Collection
+For our Analysis we used the data provided in the Data Analysis course at coursera. The data was downloaded on 17-FEB-13 using the R programming language[2]
+
+Exploratory Analysis
+Exploratory analysis was used to 1.identify missing values , 2. validate the quality of data, 3. Estimate the terms for the regression model relating FICO score to interest rate
+
+
+Statistical Modeling
+To relate Interest rates and FICO scores we used standard multivariate linear regression model[3]. Model selection and parameters was done on the basis of our prior knowledge of credit scoring and our exploratory analysis. The coefficients were estimated with ordinary least squares and standard errors computed using asymptotic approximations[4].
+
+Reproducibility
+All analysis performed are reproduced in a R markdown file. However owing to security considerations, the same is not freely available for download. If required the same may be made available on personal request.
+
+
+Results:
+The data used contained a wealth of information ranging from the revolving credit history, monthly income, the interest rate, FICO range, open credit lines, state, amount requested and amount granted. We identified 2 cases were the data was incomplete- mainly on account of no values being present for open credit lines, revolving credit balance, Inquiries in the past 6 months, and monthly income. Also since the data provided referred to FICO score range rather than the actual FICO score. To make quantitative calculations we decided to use a representative FICO score derived by averaging the lower and upper limits of the FICO range assigned to each case.
+
+Also as part of exploratory analysis we observed no discernible relation between interest rate and employment length or monthly income though we did observe that interest rates tended to be lower for loans for the purpose of education and renewable energy. 
+
+For the FICO score we observed a typical oval cloud when plotted against the interest rate suggesting a linear relationship. The first regression model related interest rate to FICO score only. The residuals showed patterns of non-random variation. We attempt to account for such variations by including potential confounders. Our final regression model was:
+ 
+INT.RATE = b0+ b1*FICO.Score + f(AMT.REQUESTED) + g(LOAN.DURATION) + e
+
+Here b0 is the intercept term and b1 represents the change in Interest rate(INT.RATE) for unit change in the representative FICO score. the terms f(AMT.REQUESTED) and g(LOAN.DURATION) represent factor models with five levels and 2 levels respectively. The error term e represents all sources of unmeasured and unmodeled variations in earthquake magnitude.
+
+We observe a highly statistically significant (P<2e-16) association between Interest rate and FICO score. A increment of one unit in the representational FICO score corresponds to a drop of 0.08  in interest rate(95%confidence interval:-0.08975, -0.08494).
+
+conclusion:
+Our Analysis suggests there is a significant negative association between FICO scores and interest rates. Including the amount requested and loan duration factors improves the model fit  but does not remove the significant relationship between the variables.
+
+While this preliminary analysis is based on a fairly small data limited to a narrow income group, a larger data which is more representative of the general population may help understanding the relationship better. There is scope of missing out on potential confounders which we may have missed which could help make the model a better fit.
+
+
+
+
+
+Figure 1 Left Panel: A smooth scatter plot of Representative FICO values plotted against the Interest rates overlaid with the regression line corresponding to no adjustments. Middle Panel: Colored by Loan Amounts Requested is the lot of residuals from linear model relating Interest rate to FICO Score. Right Panel: Colored by Loan Amounts, is the lot of residuals from a linear model relating FICO score to Interest rates adjusted for 2-level loan duration and 5-level loan amounts. Some of the patterns observed in middle panel have been eliminated.
+
