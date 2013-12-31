@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 	}
 	
 	int i = 0;
-	for(i = 0; argv[1][i] != '\0'; i++) {
+	for( i = 0; argv[1][i] != '\0'; i++) {
 		char letter = argv[1][i];
 		
 		switch(letter) {
@@ -34,8 +34,9 @@ int main(int argc, char *argv[])
                 break;
             case 'y':
             case 'Y':
-                if(i < 2) {
+                if(i > 2) {
                     printf("%d: 'Y'\n", i);
+                    //break;
                 }
                 break;
             default:
