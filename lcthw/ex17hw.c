@@ -15,13 +15,19 @@ struct Address {
 };
 
 struct Database {
-    struct Address rows[MAX_ROWS];
+    int max_rows;
+    int max_data;
+    struct Address *rows;
+    
 };
 
 struct Connection {
     FILE *file;
     struct Database *db;
 };
+
+
+void Database_close(struct Connection *conn);
 
 void die(const char *message)
 {
@@ -31,6 +37,7 @@ void die(const char *message)
         printf("ERROR: %s\n", message);
     }
     
+    //Database_close(conn);
     exit(1);
 }
 
@@ -42,6 +49,8 @@ void Address_print(struct Address *addr)
 
 void Database_load(struct Connection *conn)
 {
+    int max_rows = fread(conn->db->max_rows, sizeof(int), 1, conn->file);
+    int max_data = fread(conn->db, sizeof(int), 1, conn->file);
     int rc = fread(conn->db, sizeof(struct Database), 1, conn->file);
     if (rc != 1) die("Failed to load database.");
 }
@@ -79,8 +88,14 @@ void Database_write(struct Connection *conn)
 {
     rewind(conn->file);
     
-    int rc = fwrite(conn->db, sizeof(struct Database), 1, conn->file);
-    if (rc != 1) die("Failed to write database.");
+    int rc = fwrite(conn->db->max_rows, sizeof(int), 1, conn->file);
+    if (rc != 1) die("Failed to write database.Max_rows");
+    rc = fwrite(conn->db->max_data, sizeof(int), 1, conn->file);
+    if (rc != 1) die("Failed to write database. Max_data");
+    
+    rc = fwrite(conn->db->max_data, sizeof(struct Address), max_rows, conn->file);
+    if (rc != 1) die("Failed to write database. Address");
+    
     rc = fflush(conn->file);
     if(rc==-1) die("Cannot flush database.");
 }

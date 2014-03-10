@@ -1,0 +1,53 @@
+test: 
+  name: Check_xla_api
+  class: PL_SQL
+  description: This test case is supposed to check that
+
+given: 
+  - test: 
+      name: /path/mo_global_api.yaml
+      comment: Ensure org is set.
+      input:
+        mode: S
+        org: 15946
+  - var:
+      name: mo_global.g_allow_datafix
+      value: true
+check:
+  - object: 
+      name: xla_create_event
+      comment: this function should create events.
+      class: function
+      package: xla_events_pkg
+      input:
+        - p_mode: 
+            type: varchar2
+            comment: This is the mode in which
+        - p_org:
+            type: number
+            mode: OUT
+            comment: Org id of the country.
+        - p_event_record:
+            type: xla_ev_rec_t
+            comment: this is an input param 
+            members:
+              - to_doc_id: 
+                  type: number
+                  id: asdf
+              - from_doc_id: 
+                  type: number
+examine:
+    - object: 
+        name: c_event_id
+        class: SQL
+        sql: select event_id from ra_cust_trx_line_gl_dist_all where customer_trx_id = [[asdf]]
+        output:
+          - event_id:
+              type: number
+              id: ev_id
+
+yields: 
+   assert:
+     val: equals
+     lhs:  [[ev_id]]
+     rhs: null
