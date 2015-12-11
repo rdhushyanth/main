@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/example" value="1425027620000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/forcomp" value="1424620064000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/funsets" value="1424620192000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/objsets" value="1424620240000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/patmat" value="1424620158000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/recfun" value="1424620218000" />
+        <entry key="$PROJECT_DIR$/../../Scala/coursera/streams" value="1424620170000" />
+        <entry key="$USER_HOME$/Downloads/example" value="1425027620000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+</project>
