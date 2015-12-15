@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "isolatedModules": false,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "rootDir": "src/ts",
+        "outDir": "build/js"
+    },
+    "filesGlob": [
+        "**/src/**/*.ts",
+        "**/*.tsx",
+        "!node_modules/**"
+    ],
+    "files": [
+        "src/ts/constants.ts",
+        "src/ts/interfaces.d.ts",
+        "src/ts/todoModels.ts",
+        "src/ts/utils.ts"
+    ],
+    "exclude": [],
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
