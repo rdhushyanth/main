@@ -1,0 +1,23 @@
+{
+  "jspm": {
+    "dependencies": {
+      "react": "npm:react@^0.14.3",
+      "react-dom": "npm:react-dom@^0.14.3",
+      "react-global": "npm:react-global@^0.1.8"
+    }
+  },
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "typescript": "^1.7.5"
+  },
+  "name": "kanban-app-jspm",
+  "version": "1.0.0",
+  "description": "SurviveJS tutorial using jspm and typescript",
+  "main": "config.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dhushyanth Ramasamy",
+  "license": "ISC"
+}
