@@ -11,7 +11,8 @@
     },
     "overrides": {
       "npm:material-ui@0.14.0-rc2": {
-        "main": "lib/index"
+        "main": "lib/index",
+        "format": "es6"
       }
     }
   },
