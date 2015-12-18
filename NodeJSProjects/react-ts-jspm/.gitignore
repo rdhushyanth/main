@@ -13,7 +13,6 @@ results
 build
 node_modules
 jspm_packages
-typings
 jspm
 build.js
 build.js.map
