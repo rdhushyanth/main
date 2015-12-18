@@ -22,6 +22,15 @@
         "!node_modules/**"
     ],
     "files": [
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.core.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.core.es6.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.dom.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.es6.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.scriptHost.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/lib.webworker.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/typescript.d.ts",
+        "jspm_packages/npm/typescript@1.7.5/lib/typescriptServices.d.ts",
         "src/ts/constants.ts",
         "src/ts/interfaces.d.ts",
         "src/ts/todoModels.ts",
