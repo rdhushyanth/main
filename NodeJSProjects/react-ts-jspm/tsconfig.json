@@ -17,7 +17,7 @@
         "outDir": "build/js"
     },
     "filesGlob": [
-        "**/src/**/*.ts",
+        "**/*.ts",
         "**/*.tsx",
         "!node_modules/**"
     ],
@@ -29,6 +29,6 @@
     ],
     "exclude": [],
     "atom": {
-        "rewriteTsconfig": false
+        "rewriteTsconfig": true
     }
 }
