@@ -6,3 +6,4 @@ function main(el) {
     ReactDOM.render(divcode, el);
 }
 exports.main = main;
+//# sourceMappingURL=main.js.map

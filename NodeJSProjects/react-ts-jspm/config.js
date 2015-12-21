@@ -10,6 +10,7 @@ System.config({
   map: {
     "director": "npm:director@1.2.8",
     "material-ui": "npm:material-ui@0.14.0-rc2",
+    "rdhushyanth/material-ui": "github:rdhushyanth/material-ui@0.13.4",
     "react": "npm:react@0.14.3",
     "react-dom": "npm:react-dom@0.14.3",
     "react-global": "npm:react-global@0.1.8",
@@ -56,6 +57,19 @@ System.config({
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
     },
+    "github:rdhushyanth/material-ui@0.13.4": {
+      "inline-style-prefixer": "npm:inline-style-prefixer@0.5.4",
+      "lodash.debounce": "npm:lodash.debounce@3.1.1",
+      "lodash.throttle": "npm:lodash.throttle@3.0.4",
+      "react": "npm:react@0.14.3",
+      "react-addons-create-fragment": "npm:react-addons-create-fragment@0.14.3",
+      "react-addons-pure-render-mixin": "npm:react-addons-pure-render-mixin@0.14.3",
+      "react-addons-transition-group": "npm:react-addons-transition-group@0.14.3",
+      "react-addons-update": "npm:react-addons-update@0.14.3",
+      "react-dom": "npm:react-dom@0.14.3",
+      "react-tap-event-plugin": "npm:react-tap-event-plugin@0.2.1",
+      "warning": "npm:warning@2.1.0"
+    },
     "npm:amdefine@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "module": "github:jspm/nodelibs-module@0.1.0",
@@ -70,7 +84,7 @@ System.config({
       "util": "npm:util@0.10.3"
     },
     "npm:browserslist@1.0.1": {
-      "caniuse-db": "npm:caniuse-db@1.0.30000377",
+      "caniuse-db": "npm:caniuse-db@1.0.30000379",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
@@ -86,7 +100,7 @@ System.config({
     },
     "npm:caniuse-api@1.4.1": {
       "browserslist": "npm:browserslist@1.0.1",
-      "caniuse-db": "npm:caniuse-db@1.0.30000377",
+      "caniuse-db": "npm:caniuse-db@1.0.30000379",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "lodash.memoize": "npm:lodash.memoize@2.4.1",
       "lodash.uniq": "npm:lodash.uniq@3.2.2",

@@ -20,3 +20,4 @@ var MyView = (function (_super) {
     return MyView;
 })(React.Component);
 exports.MyView = MyView;
+//# sourceMappingURL=myview.js.map

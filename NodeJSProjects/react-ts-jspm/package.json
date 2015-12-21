@@ -2,6 +2,7 @@
   "jspm": {
     "dependencies": {
       "material-ui": "npm:material-ui@^0.14.0-rc2",
+      "rdhushyanth/material-ui": "github:rdhushyanth/material-ui@^0.13.4",
       "react": "npm:react@^0.14.3",
       "react-dom": "npm:react-dom@^0.14.3",
       "react-global": "npm:react-global@^0.1.8"
@@ -10,9 +11,14 @@
       "typescript": "npm:typescript@^1.6.2"
     },
     "overrides": {
+      "github:rdhushyanth/material-ui@0.13.4": {
+        "format": "es6",
+        "registry": "npm",
+        "main": "lib/index"
+      },
       "npm:material-ui@0.14.0-rc2": {
-        "main": "lib/index",
-        "format": "es6"
+        "format": "es6",
+        "main": "lib/index"
       }
     }
   },
